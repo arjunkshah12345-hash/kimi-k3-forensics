@@ -8,3 +8,4 @@ site/dist/
 out/
 launch/videos/*/renders/
 launch/videos/*/node_modules/
+launch/videos/*/.hyperframes/

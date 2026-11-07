@@ -1,0 +1,50 @@
+<template>
+  <style>
+    @font-face { font-family: "Geist"; src: url("assets/fonts/geist-latin.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Geist Mono"; src: url("assets/fonts/geist-mono-latin.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; background: #121614; color: #eceae3; font-family: "Geist", sans-serif; overflow: hidden; }
+    #end-lock { position: absolute; left: 50%; top: 340px; transform: translateX(-50%); display: flex; align-items: center; gap: 44px; }
+    #end-mark { width: 168px; height: 168px; }
+    #end-word-wrap { overflow: hidden; }
+    #end-word { font-size: 124px; font-weight: 700; letter-spacing: -0.045em; white-space: nowrap; line-height: 1.12; }
+    #end-cta { position: absolute; left: 0; right: 0; top: 640px; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+    #end-url { font: 500 46px "Geist Mono", monospace; color: #f2a65a; }
+    #end-repo { font: 500 36px "Geist Mono", monospace; color: #8d968f; }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+    <div id="end-lock">
+      <canvas id="end-mark" width="168" height="168"></canvas>
+      <div id="end-word-wrap"><div id="end-word">K3 Weight Forensics</div></div>
+    </div>
+    <div id="end-cta">
+      <div id="end-url">arjunkshah12345-hash.github.io/kimi-k3-forensics</div>
+      <div id="end-repo">code + raw results · github.com/arjunkshah12345-hash/kimi-k3-forensics</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      // The mark: three columns of the lattice rising, the last one lit. Same drawing as the site's favicon.
+      const cv = document.getElementById("end-mark");
+      const ctx = cv.getContext("2d");
+      const CELL = 21, DOT = 17;
+      const COLS = [{ x: 1, h: 2, c: "#eceae3" }, { x: 3, h: 4, c: "#eceae3" }, { x: 5, h: 6, c: "#f2a65a" }];
+      const st = { p: 0 };
+      function draw() {
+        ctx.clearRect(0, 0, 168, 168);
+        const total = 12; let k = Math.round(st.p * total);
+        for (const col of COLS) for (let r = 0; r < col.h; r++) {
+          if (k-- <= 0) return;
+          ctx.fillStyle = col.c;
+          ctx.fillRect(col.x * CELL + 2, (7 - r) * CELL + 2 - CELL, DOT, DOT);
+        }
+      }
+      const tl = gsap.timeline({ paused: true, onUpdate: draw });
+      tl.fromTo(st, { p: 0 }, { p: 1, duration: 0.8, ease: "none" }, 0.05);
+      tl.fromTo("#end-word", { xPercent: -105 }, { xPercent: 0, duration: 0.7, ease: "expo.out" }, 0.95);
+      tl.fromTo("#end-url", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 1.5);
+      tl.fromTo("#end-repo", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 1.7);
+      draw();
+      window.__timelines["endcard"] = tl;
+    })();
+  </script>
+</template>

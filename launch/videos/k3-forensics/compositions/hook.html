@@ -1,0 +1,66 @@
+<template>
+  <style>
+    @font-face { font-family: "Geist"; src: url("assets/fonts/geist-latin.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Geist Mono"; src: url("assets/fonts/geist-mono-latin.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; background: #121614; color: #eceae3; font-family: "Geist", sans-serif; overflow: hidden; }
+    #hook-head { position: absolute; left: 120px; top: 120px; display: flex; flex-direction: column; gap: 4px; }
+    #hook-l1 { font-size: 230px; font-weight: 700; letter-spacing: -0.045em; line-height: 0.95; }
+    #hook-l2 { font-size: 104px; font-weight: 700; letter-spacing: -0.03em; color: #8d968f; line-height: 1; }
+    .hook-w { display: inline-block; }
+    #hook-bars { position: absolute; left: 120px; top: 660px; width: 1680px; height: 260px; }
+    #hook-label-k3 { position: absolute; left: 120px; top: 612px; font: 500 36px "Geist Mono", monospace; color: #eceae3; }
+    #hook-label-t4 { position: absolute; left: 172px; top: 852px; font: 500 36px "Geist Mono", monospace; color: #f2a65a; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
+    <div id="hook-head">
+      <div id="hook-l1"><span class="hook-w">2.8</span> <span class="hook-w">trillion</span></div>
+      <div id="hook-l2"><span class="hook-w">parameters</span></div>
+    </div>
+    <div id="hook-label-k3">Kimi K3 checkpoint · 1.56 TB</div>
+    <canvas id="hook-bars" width="1680" height="260"></canvas>
+    <div id="hook-label-t4">← one free T4 GPU · 14.5 GB</div>
+  </div>
+  <script>
+    (function () {
+      const CELL = 12, DOT = 8;
+      const cv = document.getElementById("hook-bars");
+      const ctx = cv.getContext("2d");
+      const st = { k3: 0, t4: 0 };
+      // Ordered-dither threshold so the big bar reads as printed cells, not a solid slab.
+      const bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
+      function draw() {
+        ctx.clearRect(0, 0, cv.width, cv.height);
+        const cols = Math.floor(cv.width / CELL);
+        const k3cols = Math.round(cols * st.k3);
+        for (let c = 0; c < k3cols; c++) {
+          for (let r = 0; r < 10; r++) {
+            const lvl = 0.62; // even mid-tone
+            if (bayer[(r % 4) * 4 + (c % 4)] / 16 < lvl) {
+              ctx.fillStyle = "#eceae3";
+              ctx.fillRect(c * CELL, 20 + r * CELL, DOT, DOT);
+            }
+          }
+        }
+        // T4: 14.5 GB of 1,560 GB is under 1% of the bar: two cells.
+        const t4cols = Math.max(0, Math.round(2 * st.t4));
+        for (let c = 0; c < t4cols; c++) {
+          for (let r = 0; r < 4; r++) {
+            ctx.fillStyle = "#f2a65a";
+            ctx.fillRect(c * CELL, 176 + r * CELL, DOT + 2, DOT + 2);
+          }
+        }
+      }
+      const tl = gsap.timeline({ paused: true, onUpdate: draw });
+      tl.fromTo("#hook-l1 .hook-w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, stagger: 0.09, ease: "power4.out" }, 0.05);
+      tl.fromTo("#hook-l2 .hook-w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out" }, 0.3);
+      tl.fromTo("#hook-label-k3", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 1.15);
+      tl.fromTo(st, { k3: 0 }, { k3: 1, duration: 1.0, ease: "power2.inOut" }, 1.2);
+      tl.fromTo(st, { t4: 0 }, { t4: 1, duration: 0.12, ease: "none" }, 2.45);
+      tl.fromTo("#hook-label-t4", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 2.5);
+      tl.fromTo("#hook-head", { opacity: 1 }, { opacity: 0, filter: "blur(8px)", duration: 0.25, ease: "power3.in", immediateRender: false }, 4.72);
+      tl.fromTo(["#hook-label-k3", "#hook-label-t4"], { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power3.in", immediateRender: false }, 4.72);
+      draw();
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>
