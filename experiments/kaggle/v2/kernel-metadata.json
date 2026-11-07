@@ -1,0 +1,13 @@
+{
+  "id": "YOUR_KAGGLE_USERNAME/k3-weight-forensics-v2",
+  "title": "k3-weight-forensics-v2",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

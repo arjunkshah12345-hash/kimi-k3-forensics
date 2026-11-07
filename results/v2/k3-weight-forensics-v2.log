@@ -1,0 +1,153 @@
+[{"stream_name":"stdout","time":9.437657882,"data":"[     2.1s] vocab bpe=163584 total=163840 named_special=16 reserved=240\n"}
+,{"stream_name":"stdout","time":9.448502377,"data":"[     2.1s] V2-A: nearest-neighbour glitch detection\n"}
+,{"stream_name":"stdout","time":61.130049649,"data":"[    53.8s]   embed: reserved nn p50=0.052 p99=0.062 bpe p50=0.458 -\u003e 16 untrained BPE\n"}
+,{"stream_name":"stdout","time":139.429304178,"data":"[   132.1s]   unembed: reserved nn p50=0.059 p99=0.071 bpe p50=0.642 -\u003e 0 untrained BPE\n"}
+,{"stream_name":"stdout","time":139.429865797,"data":"[   132.1s] V2-B: router load with vs without balancing bias\n"}
+,{"stream_name":"stdout","time":292.273892368,"data":"[   284.9s]    [{'layer': 1, 'cv_nobias': 0.8510584831237793, 'cv_bias': 1.0846788883209229, 'corr_logload_nobias_bias': 0.354669988155365, 'zero_nobias': 2, 'zero_bias': 6}, {'layer': 2, 'cv_nobias': 0.7337111830711365, 'cv_bias': 1.3350193500518799, 'corr_logload_nobias_bias': -0.004179809242486954, 'zero_nobias': 0, 'zero_bias': 6}, {'layer': 3, 'cv_nobias': 1.0356041193008423, 'cv_bias': 1.3626526594161987, 'corr_logload_nobias_bias': -0.5786268711090088, 'zero_nobias': 0, 'zero_bias': 6}]\n"}
+,{"stream_name":"stdout","time":292.440290248,"data":"[   285.1s] V2-C: expert write-direction lexicon across all layers\n"}
+,{"stream_name":"stdout","time":343.753874665,"data":"[   336.4s]   L1: lex_mean=0.177 frac\u003e=0.5=0.009  33 MB/s  ex: [' SV', '.sv', ' Sv', '往复', 'Sv', 'SV']\n"}
+,{"stream_name":"stdout","time":394.032568297,"data":"[   386.7s]   L2: lex_mean=0.185 frac\u003e=0.5=0.003  43 MB/s  ex: ['-des', ' jaw', 'ample', ' deserving', '基', '灶']\n"}
+,{"stream_name":"stdout","time":445.113174936,"data":"[   437.8s]   L3: lex_mean=0.169 frac\u003e=0.5=0.006  50 MB/s  ex: [' inv', '_inv', 'riad', '视频会议', '地步', '涯']\n"}
+,{"stream_name":"stdout","time":454.586864689,"data":"[   447.2s] range retry model-00005-of-000096.safetensors 503 91\n"}
+,{"stream_name":"stdout","time":496.032370271,"data":"[   488.7s]   L4: lex_mean=0.177 frac\u003e=0.5=0.004  56 MB/s  ex: ['Operator', '牛牛', ' Operator', ' particulars', ' Operators', ' operator']\n"}
+,{"stream_name":"stdout","time":546.522511379,"data":"[   539.2s]   L5: lex_mean=0.164 frac\u003e=0.5=0.003  60 MB/s  ex: ['conn', 'Conn', '亦有', ' conn', '均衡发展', 'god']\n"}
+,{"stream_name":"stdout","time":596.739572315,"data":"[   589.4s]   L6: lex_mean=0.142 frac\u003e=0.5=0.000  64 MB/s  ex: [' posed', 'VT', 'defs', 'aled', ' foundational', '和发展']\n"}
+,{"stream_name":"stdout","time":646.45663478,"data":"[   639.1s]   L7: lex_mean=0.166 frac\u003e=0.5=0.004  67 MB/s  ex: [' ELSE', 'ELSE', 'Else', 'else', ' Else', '九年']\n"}
+,{"stream_name":"stdout","time":696.114371957,"data":"[   688.8s]   L8: lex_mean=0.166 frac\u003e=0.5=0.009  70 MB/s  ex: ['Selector', 'Selectors', ' Selector', 'ly', '经验丰富', '霓']\n"}
+,{"stream_name":"stdout","time":746.071983919,"data":"[   738.7s]   L9: lex_mean=0.156 frac\u003e=0.5=0.007  73 MB/s  ex: [' exchange', 'exchange', 'Exchange', '-exchange', ' Exchange', ' exchanging']\n"}
+,{"stream_name":"stdout","time":796.115350949,"data":"[   788.8s]   L10: lex_mean=0.155 frac\u003e=0.5=0.004  75 MB/s  ex: ['(non', 'non', '-non', '的非', '和非', 'Non']\n"}
+,{"stream_name":"stdout","time":845.367152685,"data":"[   838.0s]   L11: lex_mean=0.160 frac\u003e=0.5=0.007  77 MB/s  ex: ['-than', '_than', ' than', ' Than', 'than', 'Than']\n"}
+,{"stream_name":"stdout","time":894.931799779,"data":"[   887.6s]   L12: lex_mean=0.185 frac\u003e=0.5=0.013  78 MB/s  ex: [' Buff', 'Buff', '_buff', 'buff', ' buff', '_apps']\n"}
+,{"stream_name":"stdout","time":944.156879414,"data":"[   936.8s]   L13: lex_mean=0.173 frac\u003e=0.5=0.011  80 MB/s  ex: ['gg', '先人', '特区', ' EITHER', ' Position', '孩儿']\n"}
+,{"stream_name":"stdout","time":993.891969803,"data":"[   986.5s]   L14: lex_mean=0.181 frac\u003e=0.5=0.016  81 MB/s  ex: ['ayana', '-Ray', 'ray', ' ray', '其他方面', ' differently']\n"}
+,{"stream_name":"stdout","time":1043.557714054,"data":"[  1036.2s]   L15: lex_mean=0.193 frac\u003e=0.5=0.016  82 MB/s  ex: ['jquery', '_css', 'CSS', 'Css', ' CSS', '难得的']\n"}
+,{"stream_name":"stdout","time":1093.583058626,"data":"[  1086.2s]   L16: lex_mean=0.207 frac\u003e=0.5=0.030  83 MB/s  ex: ['(java', '_java', ' java', 'java', '/java', ' Java']\n"}
+,{"stream_name":"stdout","time":1142.983475588,"data":"[  1135.6s]   L17: lex_mean=0.221 frac\u003e=0.5=0.033  84 MB/s  ex: ['+json', ' json', '-json', 'json', '=json', '(json']\n"}
+,{"stream_name":"stdout","time":1192.55145526,"data":"[  1185.2s]   L18: lex_mean=0.204 frac\u003e=0.5=0.017  85 MB/s  ex: ['_Channel', ' poll', '的首', 'tx', ' flock', '南下']\n"}
+,{"stream_name":"stdout","time":1241.696921278,"data":"[  1234.3s]   L19: lex_mean=0.213 frac\u003e=0.5=0.029  86 MB/s  ex: [' scripts', 'scripts', 'script', '_scripts', '-script', '.Script']\n"}
+,{"stream_name":"stdout","time":1291.58565124,"data":"[  1284.2s]   L20: lex_mean=0.211 frac\u003e=0.5=0.035  87 MB/s  ex: [' channel', ' Employer', '(Channel', ' channels', 'Channel', '_channel']\n"}
+,{"stream_name":"stdout","time":1341.256360276,"data":"[  1333.9s]   L21: lex_mean=0.193 frac\u003e=0.5=0.023  88 MB/s  ex: [' disposition', '雨天', 'ubert', ' Hast', 'qx', '为阳']\n"}
+,{"stream_name":"stdout","time":1391.60441977,"data":"[  1384.3s]   L22: lex_mean=0.193 frac\u003e=0.5=0.027  88 MB/s  ex: [' probing', ' seasons', 'mington', ' keyed', ' grub', 'XIS']\n"}
+,{"stream_name":"stdout","time":1441.322702184,"data":"[  1434.0s]   L23: lex_mean=0.193 frac\u003e=0.5=0.020  89 MB/s  ex: ['大大的', ' Fal', ' falsely', ' Dial', 'LIN', ' dial']\n"}
+,{"stream_name":"stdout","time":1490.592503919,"data":"[  1483.2s]   L24: lex_mean=0.182 frac\u003e=0.5=0.012  90 MB/s  ex: [' unst', 'active', '-active', '/active', ' active', '时间都']\n"}
+,{"stream_name":"stdout","time":1539.91820366,"data":"[  1532.6s]   L25: lex_mean=0.183 frac\u003e=0.5=0.011  90 MB/s  ex: ['Fit', ' fit', ' Fit', ' literature', 'fit', '\\\\xe6\\\\x82']\n"}
+,{"stream_name":"stdout","time":1589.28038431,"data":"[  1581.9s]   L26: lex_mean=0.185 frac\u003e=0.5=0.006  91 MB/s  ex: [' absorbing', ' ladder', '形状的', 'field', ' absor', ' absorb']\n"}
+,{"stream_name":"stdout","time":1639.054011255,"data":"[  1631.7s]   L27: lex_mean=0.181 frac\u003e=0.5=0.013  91 MB/s  ex: [' messages', '\\\\xe8\\\\x91', ' Messages', 'Messages', '_messages', '--']\n"}
+,{"stream_name":"stdout","time":1688.376093931,"data":"[  1681.0s]   L28: lex_mean=0.182 frac\u003e=0.5=0.010  92 MB/s  ex: [' Sche', '翠', '宣传和', 'oreg', '母猪', '茵']\n"}
+,{"stream_name":"stdout","time":1737.786412051,"data":"[  1730.4s]   L29: lex_mean=0.191 frac\u003e=0.5=0.021  92 MB/s  ex: [' narrower', ' vaguely', ' manifestation', ' Pere', ' sciences', ' notion']\n"}
+,{"stream_name":"stdout","time":1787.558365636,"data":"[  1780.2s]   L30: lex_mean=0.181 frac\u003e=0.5=0.021  93 MB/s  ex: [' FAILED', ' Failed', 'Failed', ' failed', ' fails', '_failed']\n"}
+,{"stream_name":"stdout","time":1836.853157469,"data":"[  1829.5s]   L31: lex_mean=0.173 frac\u003e=0.5=0.006  93 MB/s  ex: ['统', '新老', '下个', 'Diss', '新旧', '是国内']\n"}
+,{"stream_name":"stdout","time":1887.00068775,"data":"[  1879.7s]   L32: lex_mean=0.187 frac\u003e=0.5=0.010  93 MB/s  ex: ['kim', ' gap', 'gap', '_gap', ' UCS', ' Gap']\n"}
+,{"stream_name":"stdout","time":1936.549676374,"data":"[  1929.2s]   L33: lex_mean=0.177 frac\u003e=0.5=0.008  94 MB/s  ex: ['rode', '恰恰相反', '的名义', 'nor', 'esu', 'oresc']\n"}
+,{"stream_name":"stdout","time":1986.076413371,"data":"[  1978.7s]   L34: lex_mean=0.182 frac\u003e=0.5=0.009  94 MB/s  ex: ['wire', ' Rox', 'Owned', ' tard', 'WIRE', ' owned']\n"}
+,{"stream_name":"stdout","time":2035.421122211,"data":"[  2028.1s]   L35: lex_mean=0.177 frac\u003e=0.5=0.016  94 MB/s  ex: ['盟', 'andle', ' grat', 'omorphism', ' Griff', 'ilt']\n"}
+,{"stream_name":"stdout","time":2084.966158963,"data":"[  2077.6s]   L36: lex_mean=0.185 frac\u003e=0.5=0.008  95 MB/s  ex: [' systematically', 'TON', ' OPEN', 'OPEN', ' rec', 'aon']\n"}
+,{"stream_name":"stdout","time":2134.537732336,"data":"[  2127.2s]   L37: lex_mean=0.183 frac\u003e=0.5=0.010  95 MB/s  ex: [' priceless', ' laz', 'Lazy', '无价', ' habit', 'KA']\n"}
+,{"stream_name":"stdout","time":2184.351292082,"data":"[  2177.0s]   L38: lex_mean=0.176 frac\u003e=0.5=0.007  95 MB/s  ex: [' https', '(https', '\\thttps', '：https', 'https', 'ttps']\n"}
+,{"stream_name":"stdout","time":2233.789601066,"data":"[  2226.4s]   L39: lex_mean=0.180 frac\u003e=0.5=0.003  95 MB/s  ex: [' Than', ' than', 'than', 'Than', '_than', '-than']\n"}
+,{"stream_name":"stdout","time":2283.344917859,"data":"[  2276.0s]   L40: lex_mean=0.179 frac\u003e=0.5=0.013  96 MB/s  ex: [' Available', ' available', ' AVAILABLE', 'available', ' dispon', 'Available']\n"}
+,{"stream_name":"stdout","time":2333.290774296,"data":"[  2325.9s]   L41: lex_mean=0.179 frac\u003e=0.5=0.016  96 MB/s  ex: [' ALWAYS', ' always', 'Always', ' Always', 'always', '_ALWAYS']\n"}
+,{"stream_name":"stdout","time":2382.87568901,"data":"[  2375.5s]   L42: lex_mean=0.184 frac\u003e=0.5=0.016  96 MB/s  ex: ['dw', '(dw', ' dv', 'Dw', ' dw', ' pec']\n"}
+,{"stream_name":"stdout","time":2432.392350442,"data":"[  2425.0s]   L43: lex_mean=0.179 frac\u003e=0.5=0.018  96 MB/s  ex: [' vs', ' versus', ' VS', 'vs', '-vs', 'VS']\n"}
+,{"stream_name":"stdout","time":2482.002865457,"data":"[  2474.7s]   L44: lex_mean=0.177 frac\u003e=0.5=0.019  97 MB/s  ex: ['amaz', 'oof', 'imal', '二度', ' amaz', ' stolen']\n"}
+,{"stream_name":"stdout","time":2510.106927149,"data":"[  2502.8s] range error model-00046-of-000096.safetensors ChunkedEncodingError(ProtocolError('Connection broken: IncompleteRead(0 bytes read, 5849088 more expected)', IncompleteRead(0 bytes read, 5849088 more expected)))\n"}
+,{"stream_name":"stdout","time":2531.414118063,"data":"[  2524.1s]   L45: lex_mean=0.183 frac\u003e=0.5=0.018  97 MB/s  ex: [' each', '-each', '.each', 'ston', 'each', ' EACH']\n"}
+,{"stream_name":"stdout","time":2580.499051441,"data":"[  2573.2s]   L46: lex_mean=0.160 frac\u003e=0.5=0.016  97 MB/s  ex: ['走去', 'arka', ' motor', '_-', ' interior', ' latter']\n"}
+,{"stream_name":"stdout","time":2630.213273945,"data":"[  2622.9s]   L47: lex_mean=0.175 frac\u003e=0.5=0.022  97 MB/s  ex: [' acronym', ' researches', '在读', '完善了', '在说', '料']\n"}
+,{"stream_name":"stdout","time":2679.722848574,"data":"[  2672.4s]   L48: lex_mean=0.239 frac\u003e=0.5=0.065  97 MB/s  ex: ['期', 'season', 'udson', 'Responder', ' Respond', '遁']\n"}
+,{"stream_name":"stdout","time":2729.804558787,"data":"[  2722.5s]   L49: lex_mean=0.257 frac\u003e=0.5=0.093  97 MB/s  ex: ['anco', ' Ord', 'Ord', '黏', '和二', ' Neo']\n"}
+,{"stream_name":"stdout","time":2779.488778431,"data":"[  2772.1s]   L50: lex_mean=0.182 frac\u003e=0.5=0.019  98 MB/s  ex: [' Previous', 'Previous', ' previous', '_previous', 'previous', '.previous']\n"}
+,{"stream_name":"stdout","time":2829.210259908,"data":"[  2821.9s]   L51: lex_mean=0.173 frac\u003e=0.5=0.017  98 MB/s  ex: ['后来才知道', ' hindsight', ' timelines', 'esse', 'Timeline', 'uther']\n"}
+,{"stream_name":"stdout","time":2878.529743473,"data":"[  2871.2s]   L52: lex_mean=0.275 frac\u003e=0.5=0.112  98 MB/s  ex: ['/active', 'ignum', '当下', 'jun', '了过去', \"er's\"]\n"}
+,{"stream_name":"stdout","time":2928.274932489,"data":"[  2920.9s]   L53: lex_mean=0.300 frac\u003e=0.5=0.136  98 MB/s  ex: ['-discovery', ' Waters', ' Vanderbilt', '大学生活', '竣', ' Rooms']\n"}
+,{"stream_name":"stdout","time":2977.641795986,"data":"[  2970.3s]   L54: lex_mean=0.269 frac\u003e=0.5=0.128  98 MB/s  ex: [' ECS', '喝杯', '喝一杯', 'ABB', ' turb', ' overseas']\n"}
+,{"stream_name":"stdout","time":3027.476855082,"data":"[  3020.1s]   L55: lex_mean=0.198 frac\u003e=0.5=0.039  98 MB/s  ex: [' markup', ' html', ' HTML', ' Html', 'HTML', '-html']\n"}
+,{"stream_name":"stdout","time":3077.081988398,"data":"[  3069.7s]   L56: lex_mean=0.329 frac\u003e=0.5=0.186  98 MB/s  ex: ['_codegen', ' Lanc', ' Monaco', 'ascular', ' PCI', ' laser']\n"}
+,{"stream_name":"stdout","time":3126.460115826,"data":"[  3119.1s]   L57: lex_mean=0.330 frac\u003e=0.5=0.220  99 MB/s  ex: [' AWS', 'AWS', '.AWS', ' aws', '-aws', '/AWS']\n"}
+,{"stream_name":"stdout","time":3180.478446007,"data":"[  3173.1s]   L58: lex_mean=0.281 frac\u003e=0.5=0.172  99 MB/s  ex: [' JSON', 'JSON', ' json', '_JSON', '_json', 'json']\n"}
+,{"stream_name":"stdout","time":3230.035816397,"data":"[  3222.7s]   L59: lex_mean=0.478 frac\u003e=0.5=0.443  99 MB/s  ex: [' CPC', ' CP', '_CP', ' CPI', ' CPT', 'CTP']\n"}
+,{"stream_name":"stdout","time":3280.563865913,"data":"[  3273.2s]   L60: lex_mean=0.167 frac\u003e=0.5=0.017  99 MB/s  ex: ['既有', ' Bryant', '既能', 'wag', '倚', '照应']\n"}
+,{"stream_name":"stdout","time":3330.060706222,"data":"[  3322.7s]   L61: lex_mean=0.195 frac\u003e=0.5=0.036  99 MB/s  ex: [' try', 'try', 'Try', '\\ttry', '.try', ' Try']\n"}
+,{"stream_name":"stdout","time":3380.381475743,"data":"[  3373.0s]   L62: lex_mean=0.199 frac\u003e=0.5=0.039  99 MB/s  ex: ['(zero', '/zero', '-zero', '为零', ' zero', 'zero']\n"}
+,{"stream_name":"stdout","time":3429.93430027,"data":"[  3422.6s]   L63: lex_mean=0.186 frac\u003e=0.5=0.023  99 MB/s  ex: ['/out', 'out', '(out', '[out', '_out', ':out']\n"}
+,{"stream_name":"stdout","time":3479.479282414,"data":"[  3472.1s]   L64: lex_mean=0.225 frac\u003e=0.5=0.056  99 MB/s  ex: ['民政', 'oserver', ' Expenditure', '(fit', ' expenditure', ' grp']\n"}
+,{"stream_name":"stdout","time":3529.217641663,"data":"[  3521.9s]   L65: lex_mean=0.201 frac\u003e=0.5=0.031  99 MB/s  ex: [' organisation', '组织和', 'Gill', ' Gill', '曲', ' Elaine']\n"}
+,{"stream_name":"stdout","time":3579.40500473,"data":"[  3572.1s]   L66: lex_mean=0.224 frac\u003e=0.5=0.042  99 MB/s  ex: ['重生', '大河', '视频网站', '翻番', ' IPT', '服务体系']\n"}
+,{"stream_name":"stdout","time":3629.222909024,"data":"[  3621.9s]   L67: lex_mean=0.180 frac\u003e=0.5=0.022  100 MB/s  ex: ['同行的', '当你的', '和无', ' challeng', '这两条', '这两']\n"}
+,{"stream_name":"stdout","time":3679.070168843,"data":"[  3671.7s]   L68: lex_mean=0.149 frac\u003e=0.5=0.007  100 MB/s  ex: ['/pre', 'pre', 'anja', 'plist', '亲友', '希望你']\n"}
+,{"stream_name":"stdout","time":3728.871490753,"data":"[  3721.5s]   L69: lex_mean=0.207 frac\u003e=0.5=0.020  100 MB/s  ex: [' alt', 'Alt', ' Alt', ' ALT', 'Altitude', '.alt']\n"}
+,{"stream_name":"stdout","time":3778.398170303,"data":"[  3771.1s]   L70: lex_mean=0.173 frac\u003e=0.5=0.013  100 MB/s  ex: [' than', ' Than', 'than', '_than', '-than', 'Than']\n"}
+,{"stream_name":"stdout","time":3828.678814875,"data":"[  3821.3s]   L71: lex_mean=0.219 frac\u003e=0.5=0.031  100 MB/s  ex: [' Pair', '_pair', 'Pair', ' pairwise', 'pair', ' pair']\n"}
+,{"stream_name":"stdout","time":3858.92193885,"data":"[  3851.6s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3858.967334174,"data":"[  3851.6s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.034713899,"data":"[  3851.7s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.066781156,"data":"[  3851.7s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.102325077,"data":"[  3851.7s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.131333398,"data":"[  3851.8s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.150622865,"data":"[  3851.8s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.167821269,"data":"[  3851.8s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.177574123,"data":"[  3851.8s] range retry model-00073-of-000096.safetensors 403[  3851.8s] range retry  32\n"}
+,{"stream_name":"stdout","time":3859.183688434,"data":"model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.200695119,"data":"[  3851.8s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.298475114,"data":"[  3851.9s] range retry model-00073-of-000096.safetensors[  3851.9s] range retry model-00073-of-000096.safetensors 403  32\n"}
+,{"stream_name":"stdout","time":3859.301004617,"data":"403 32[  3852.0s] range retry model-00073-of-000096.safetensors\n"}
+,{"stream_name":"stdout","time":3859.301132833,"data":" 403 32\n"}
+,{"stream_name":"stdout","time":3859.320537232,"data":"[  3852.0s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.354012404,"data":"[  3852.0s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.37887668,"data":"[  3852.0s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.450006785,"data":"[  3852.1s] range retry[  3852.1s] range retry model-00073-of-000096.safetensors  model-00073-of-000096.safetensors 403403 32\n"}
+,{"stream_name":"stdout","time":3859.450518093,"data":" 32[  3852.1s]\n"}
+,{"stream_name":"stdout","time":3859.45279627,"data":" range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.466244633,"data":"[  3852.1s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.472238605,"data":"[  3852.1s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.478894247,"data":"[  3852.1s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3859.486637659,"data":"[  3852.1s] range retry model-00073-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3879.281733952,"data":"[  3871.9s]   L72: lex_mean=0.206 frac\u003e=0.5=0.036  100 MB/s  ex: ['琢', '并按照', 'CONTEXT', 'Physical', ' DISTRIB', '宫腔']\n"}
+,{"stream_name":"stdout","time":3879.314311754,"data":"[  3872.0s] range retry model-00074-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3930.172624633,"data":"[  3922.8s]   L73: lex_mean=0.220 frac\u003e=0.5=0.032  100 MB/s  ex: ['Ke', ' Ke', 'KE', '-ke', ' ke', ' KE']\n"}
+,{"stream_name":"stdout","time":3930.208706707,"data":"[  3922.9s] range retry model-00075-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":3980.656227632,"data":"[  3973.3s]   L74: lex_mean=0.203 frac\u003e=0.5=0.026  100 MB/s  ex: [' about', '_about', 'about', '关于', '-about', ' ABOUT']\n"}
+,{"stream_name":"stdout","time":3980.688305929,"data":"[  3973.3s] range retry model-00076-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4031.077048472,"data":"[  4023.7s]   L75: lex_mean=0.227 frac\u003e=0.5=0.038  100 MB/s  ex: [' yes', ' YES', 'YES', 'yes', ' Yes', '\\tyes']\n"}
+,{"stream_name":"stdout","time":4031.118733622,"data":"[  4023.8s] range retry model-00077-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4081.886952155,"data":"[  4074.5s]   L76: lex_mean=0.270 frac\u003e=0.5=0.131  100 MB/s  ex: [' summ', 'pds', 'kob', 'DSA', ' LDA', ' sdf']\n"}
+,{"stream_name":"stdout","time":4081.917939034,"data":"[  4074.6s] range retry model-00078-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4132.737865911,"data":"[  4125.4s]   L77: lex_mean=0.248 frac\u003e=0.5=0.087  100 MB/s  ex: ['-S', '_S', '\\tS', '.S', '\u003eS', ',S']\n"}
+,{"stream_name":"stdout","time":4132.768832593,"data":"[  4125.4s] range retry model-00079-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4183.626103255,"data":"[  4176.3s]   L78: lex_mean=0.254 frac\u003e=0.5=0.109  100 MB/s  ex: [' persecut', '为患', '(VM', ' purs', ' presses', ' sak']\n"}
+,{"stream_name":"stdout","time":4183.660472067,"data":"[  4176.3s] range retry model-00080-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4233.932809145,"data":"[  4226.6s]   L79: lex_mean=0.320 frac\u003e=0.5=0.176  100 MB/s  ex: [' n', ' Mun', ' munch', ' Mek', ' Nath', ' Mang']\n"}
+,{"stream_name":"stdout","time":4233.967116613,"data":"[  4226.6s] range retry model-00081-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4284.32844817,"data":"[  4277.0s]   L80: lex_mean=0.321 frac\u003e=0.5=0.230  100 MB/s  ex: ['后果', '需求量', '新一届', '从你', '连贯', '策划']\n"}
+,{"stream_name":"stdout","time":4284.367401315,"data":"[  4277.0s] range retry model-00082-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4334.496138073,"data":"[  4327.1s]   L81: lex_mean=0.157 frac\u003e=0.5=0.035  100 MB/s  ex: [' point', '_point', ' POINT', '.point', ' Point', 'Point']\n"}
+,{"stream_name":"stdout","time":4334.525135145,"data":"[  4327.2s] range retry model-00083-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4384.753259406,"data":"[  4377.4s]   L82: lex_mean=0.303 frac\u003e=0.5=0.230  100 MB/s  ex: ['EAR', ' Everett', ' emitting', 'ensemble', ' Eclipse', ' eclipse']\n"}
+,{"stream_name":"stdout","time":4384.786058102,"data":"[  4377.4s] range retry model-00084-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4435.087566287,"data":"[  4427.7s]   L83: lex_mean=0.274 frac\u003e=0.5=0.210  101 MB/s  ex: ['Epi', ' Etern', ' Emitter', ' Embedding', ' Engel', ' Evangel']\n"}
+,{"stream_name":"stdout","time":4435.12478787,"data":"[  4427.8s] range retry model-00085-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4485.818507052,"data":"[  4478.5s]   L84: lex_mean=0.335 frac\u003e=0.5=0.212  101 MB/s  ex: [' kg', ' pound', 'kg', 'KG', 'Kg', ' KG']\n"}
+,{"stream_name":"stdout","time":4485.85135863,"data":"[  4478.5s] range retry model-00086-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4536.353839555,"data":"[  4529.0s]   L85: lex_mean=0.348 frac\u003e=0.5=0.232  101 MB/s  ex: [' registry', '-registry', 'registry', 'Registry', '/registry', ' Registry']\n"}
+,{"stream_name":"stdout","time":4536.384687951,"data":"[  4529.0s] range retry model-00087-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4586.97310341,"data":"[  4579.6s]   L86: lex_mean=0.400 frac\u003e=0.5=0.326  101 MB/s  ex: ['eker', 'ffa', '(Return', ' suburb', '潼', ' POINTER']\n"}
+,{"stream_name":"stdout","time":4587.004646438,"data":"[  4579.7s] range retry model-00088-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4637.60067724,"data":"[  4630.3s]   L87: lex_mean=0.177 frac\u003e=0.5=0.100  101 MB/s  ex: [' Do', ' do', 'Do', 'do', '\\tdo', '_do']\n"}
+,{"stream_name":"stdout","time":4637.636463425,"data":"[  4630.3s] range retry model-00089-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4687.770323915,"data":"[  4680.4s]   L88: lex_mean=0.415 frac\u003e=0.5=0.352  101 MB/s  ex: [' simulated', ' prototypes', '测试结果', ' snapshots', ' prototype', ' screenshots']\n"}
+,{"stream_name":"stdout","time":4687.806854532,"data":"[  4680.5s] range retry model-00090-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4738.034985382,"data":"[  4730.7s]   L89: lex_mean=0.486 frac\u003e=0.5=0.479  101 MB/s  ex: [' Pico', ' Paz', ' Pike', ' Pap', ' Pey', ' Pandora']\n"}
+,{"stream_name":"stdout","time":4738.068785177,"data":"[  4730.7s] range retry model-00091-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4788.719405247,"data":"[  4781.4s]   L90: lex_mean=0.467 frac\u003e=0.5=0.450  101 MB/s  ex: ['-h', '/h', \"'h\", '\\th', ',h', '-H']\n"}
+,{"stream_name":"stdout","time":4788.75212292,"data":"[  4781.4s] range retry model-00092-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4839.606868947,"data":"[  4832.3s]   L91: lex_mean=0.348 frac\u003e=0.5=0.273  101 MB/s  ex: ['-s', '\\ts', 'S', '_s', ':s', '\u003eS']\n"}
+,{"stream_name":"stdout","time":4839.637882273,"data":"[  4832.3s] range retry model-00093-of-000096.safetensors 403 32\n"}
+,{"stream_name":"stdout","time":4889.80165423,"data":"[  4882.5s]   L92: lex_mean=0.123 frac\u003e=0.5=0.012  101 MB/s  ex: [' in', 'in', '_in', ' In', ' IN', '\\tin']\n"}
+,{"stream_name":"stdout","time":4889.832271805,"data":"[  4882.5s] ALL DONE 492.836434616 GB\n"}
+,{"stream_name":"stderr","time":4894.891252509,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4894.891288746,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4895.137500097,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4895.137525343,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4895.885299755,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4896.95920319,"data":"[NbConvertApp] Writing 474912 bytes to __results__.html\n"}
+]

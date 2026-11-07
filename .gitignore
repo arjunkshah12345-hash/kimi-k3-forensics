@@ -1,0 +1,10 @@
+# local scratch: third-party model files (config, index, modeling code, tokenizer), failed runs, previews
+scratch/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+site/dist/
+out/
+launch/videos/*/renders/
+launch/videos/*/node_modules/
