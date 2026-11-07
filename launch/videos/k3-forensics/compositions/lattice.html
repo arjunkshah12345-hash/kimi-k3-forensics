@@ -1,0 +1,60 @@
+<template>
+  <style>
+    @font-face { font-family: "Geist"; src: url("assets/fonts/geist-latin.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Geist Mono"; src: url("assets/fonts/geist-mono-latin.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; background: #121614; color: #eceae3; font-family: "Geist", sans-serif; overflow: hidden; }
+    #lat-cv { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    #lat-counter { position: absolute; left: 120px; top: 84px; font: 500 64px "Geist Mono", monospace; color: #8d968f; }
+    #lat-counter b { color: #eceae3; font-weight: 500; }
+    #lat-l1, #lat-l2 { position: absolute; left: 120px; top: 930px; font-size: 64px; font-weight: 700; letter-spacing: -0.03em; }
+    #lat-l2 b { color: #f2a65a; font-weight: 700; }
+    .lat-w { display: inline-block; }
+    #lat-axis-l, #lat-axis-r { position: absolute; top: 880px; font: 500 30px "Geist Mono", monospace; color: #8d968f; }
+    #lat-axis-l { left: 120px; }
+    #lat-axis-r { right: 120px; }
+  </style>
+  <div id="root" data-composition-id="lattice" data-width="1920" data-height="1080">
+    <canvas id="lat-cv" width="1920" height="1080"></canvas>
+    <div id="lat-counter">layer <b id="lat-num">01</b> / 92</div>
+    <div id="lat-axis-l">layer 1</div>
+    <div id="lat-axis-r">layer 92</div>
+    <div id="lat-l1"><span class="lat-w">82,432</span> <span class="lat-w">experts,</span> <span class="lat-w">read</span> <span class="lat-w">one</span> <span class="lat-w">by</span> <span class="lat-w">one</span></div>
+    <div id="lat-l2"><span class="lat-w">The</span> <span class="lat-w">late</span> <span class="lat-w">layers</span> <span class="lat-w"><b>fill</b></span> <span class="lat-w"><b>up</b></span></div>
+  </div>
+  <script>
+    (function () {
+      // Measured share of "spelling" experts in each of the 92 MoE layers (results/v2).
+      const SHARES = [0.009,0.003,0.006,0.004,0.003,0.0,0.004,0.009,0.007,0.004,0.007,0.013,0.011,0.016,0.016,0.03,0.033,0.017,0.029,0.035,0.023,0.027,0.02,0.012,0.011,0.006,0.013,0.01,0.021,0.021,0.006,0.01,0.008,0.009,0.016,0.008,0.01,0.007,0.003,0.013,0.016,0.016,0.018,0.019,0.018,0.016,0.022,0.065,0.093,0.019,0.017,0.112,0.136,0.128,0.039,0.186,0.22,0.172,0.443,0.017,0.036,0.039,0.023,0.056,0.031,0.042,0.022,0.007,0.02,0.013,0.031,0.036,0.032,0.026,0.038,0.131,0.087,0.109,0.176,0.23,0.035,0.23,0.21,0.212,0.232,0.326,0.1,0.352,0.479,0.45,0.273,0.012];
+      const cv = document.getElementById("lat-cv");
+      const ctx = cv.getContext("2d");
+      const X0 = 120, X1 = 1800, Y0 = 200, Y1 = 860;
+      const N = SHARES.length, colW = (X1 - X0) / N, rows = Math.floor((Y1 - Y0) / colW);
+      function hash(a, b) { let h = (a * 374761393 + b * 668265263) | 0; h = (h ^ (h >>> 13)) * 1274126177; h ^= h >>> 16; return ((h >>> 0) % 100000) / 100000; }
+      const st = { p: 0 };
+      function draw() {
+        ctx.clearRect(0, 0, 1920, 1080);
+        const shown = st.p * N;
+        for (let c = 0; c < N; c++) {
+          if (c >= shown) break;
+          const fresh = shown - c < 1.5;
+          for (let r = 0; r < rows; r++) {
+            const x = X0 + c * colW, y = Y0 + r * colW;
+            const lit = hash(c + 1, r + 7) < 0.015 + SHARES[c] * 1.9;
+            if (lit) { ctx.fillStyle = fresh ? "#eceae3" : "#f2a65a"; ctx.fillRect(x + 3, y + 3, colW - 6, colW - 6); }
+            else { ctx.fillStyle = "rgba(236,234,227,0.16)"; ctx.fillRect(x + colW / 2 - 2, y + colW / 2 - 2, 4, 4); }
+          }
+        }
+        const n = Math.max(1, Math.min(N, Math.ceil(shown)));
+        document.getElementById("lat-num").textContent = String(n).padStart(2, "0");
+      }
+      const tl = gsap.timeline({ paused: true, onUpdate: draw });
+      tl.fromTo(["#lat-counter", "#lat-axis-l", "#lat-axis-r"], { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.05);
+      tl.fromTo(st, { p: 0 }, { p: 1, duration: 5.2, ease: "none" }, 0.0);
+      tl.fromTo("#lat-l1 .lat-w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.07, ease: "power4.out" }, 0.5);
+      tl.fromTo("#lat-l1", { opacity: 1 }, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power3.in", immediateRender: false }, 4.6);
+      tl.fromTo("#lat-l2 .lat-w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.07, ease: "power4.out" }, 4.85);
+      draw();
+      window.__timelines["lattice"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,55 @@
+<template>
+  <style>
+    @font-face { font-family: "Geist"; src: url("assets/fonts/geist-latin.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Geist Mono"; src: url("assets/fonts/geist-mono-latin.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; background: #121614; color: #eceae3; font-family: "Geist", sans-serif; overflow: hidden; }
+    #tk-head { position: absolute; left: 120px; top: 150px; font-size: 128px; font-weight: 700; letter-spacing: -0.045em; line-height: 1; width: 1600px; }
+    #tk-head b { color: #f2a65a; font-weight: 700; }
+    .tk-w { display: inline-block; }
+    #tk-cv { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    #tk-l, #tk-m, #tk-r { position: absolute; top: 790px; font: 500 34px "Geist Mono", monospace; color: #8d968f; }
+    #tk-l { left: 120px; }
+    #tk-m { left: 650px; color: #f2a65a; }
+    #tk-r { right: 120px; }
+    #tk-note { position: absolute; left: 120px; top: 880px; font-size: 44px; font-weight: 500; color: #8d968f; letter-spacing: -0.01em; }
+  </style>
+  <div id="root" data-composition-id="tokens" data-width="1920" data-height="1080">
+    <div id="tk-head"><span class="tk-w">Only</span> <span class="tk-w"><b>16</b></span> <span class="tk-w">tokens</span> <span class="tk-w">were</span> <span class="tk-w">never</span> <span class="tk-w">trained</span></div>
+    <canvas id="tk-cv" width="1920" height="1080"></canvas>
+    <div id="tk-l">token 0</div>
+    <div id="tk-m">⇥Bmori ⇥Pnapi</div>
+    <div id="tk-r">163,583</div>
+    <div id="tk-note">13 impossible bytes, 2 species codes, 1 broken pair</div>
+  </div>
+  <script>
+    (function () {
+      const IDS = [183, 57119, 186, 185, 184, 179, 125, 57118, 180, 181, 187, 1699, 177, 124, 182, 178];
+      const V = 163584, X0 = 120, W = 1680, Y = 560, H = 200, CELL = 12;
+      const cv = document.getElementById("tk-cv");
+      const ctx = cv.getContext("2d");
+      const st = { p: 0, ticks: 0 };
+      function draw() {
+        ctx.clearRect(0, 0, 1920, 1080);
+        const cols = Math.floor(W / CELL);
+        const n = Math.round(cols * st.p);
+        ctx.fillStyle = "rgba(236,234,227,0.45)";
+        for (let c = 0; c < n; c++) for (let r = 0; r < H / CELL; r++) if ((c + r) % 2 === 0) ctx.fillRect(X0 + c * CELL + 4, Y + r * CELL + 4, 4, 4);
+        if (st.ticks > 0) {
+          ctx.fillStyle = "#f2a65a";
+          const h = (H + 40) * st.ticks;
+          IDS.forEach((id) => { const x = X0 + (id / V) * W; ctx.fillRect(Math.round(x) - 3, Y + H / 2 - h / 2, 6, h); });
+        }
+      }
+      const tl = gsap.timeline({ paused: true, onUpdate: draw });
+      tl.fromTo("#tk-head .tk-w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.07, ease: "power4.out" }, 0.1);
+      tl.fromTo(st, { p: 0 }, { p: 1, duration: 1.0, ease: "power2.inOut" }, 0.6);
+      tl.fromTo(["#tk-l", "#tk-r"], { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.8);
+      tl.fromTo(st, { ticks: 0 }, { ticks: 1, duration: 0.35, ease: "back.out(1.8)" }, 1.7);
+      tl.fromTo("#tk-m", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 1.95);
+      tl.fromTo("#tk-note", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 2.1);
+      tl.fromTo("#root > *", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power3.in", immediateRender: false }, 5.08);
+      draw();
+      window.__timelines["tokens"] = tl;
+    })();
+  </script>
+</template>

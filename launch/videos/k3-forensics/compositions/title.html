@@ -1,0 +1,31 @@
+<template>
+  <style>
+    @font-face { font-family: "Geist"; src: url("assets/fonts/geist-latin.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Geist Mono"; src: url("assets/fonts/geist-mono-latin.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; background: #121614; color: #eceae3; font-family: "Geist", sans-serif; overflow: hidden; }
+    #title-block { position: absolute; left: 120px; top: 250px; display: flex; flex-direction: column; gap: 18px; }
+    #title-name { font-size: 260px; font-weight: 700; letter-spacing: -0.05em; line-height: 0.9; }
+    #title-sub { font-size: 120px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: #8d968f; }
+    #title-facts { margin-top: 40px; font: 500 40px "Geist Mono", monospace; color: #eceae3; }
+    #title-facts b { color: #f2a65a; font-weight: 500; }
+    .title-ch { display: inline-block; }
+  </style>
+  <div id="root" data-composition-id="title" data-width="1920" data-height="1080">
+    <div id="title-block">
+      <div id="title-name"><span class="title-ch">K</span><span class="title-ch">i</span><span class="title-ch">m</span><span class="title-ch">i</span>&nbsp;<span class="title-ch">K</span><span class="title-ch">3</span></div>
+      <div id="title-sub">Weight Forensics</div>
+      <div id="title-facts"><b>546 GB</b> read · one free T4</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#title-name .title-ch", { opacity: 0.25, filter: "blur(4px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.12, stagger: 0.06, ease: "power3.out" }, 0.05);
+      tl.fromTo("#title-name .title-ch", { color: "#8d968f" }, { color: "#eceae3", duration: 0.12, stagger: 0.06, ease: "none" }, 0.05);
+      tl.fromTo("#title-sub", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.45);
+      tl.fromTo("#title-facts", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.75);
+      tl.fromTo("#title-block", { opacity: 1, x: 0 }, { opacity: 0, x: -160, filter: "blur(10px)", duration: 0.28, ease: "power3.in", immediateRender: false }, 3.0);
+      window.__timelines["title"] = tl;
+    })();
+  </script>
+</template>
